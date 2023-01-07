@@ -59,6 +59,18 @@ inquirer
     .then((data) =>
     {
         // TODO: Create a function to write README file
-        const filename = `${data.name.toLowerCase().split(' ').join('')}.md`;
-        fs.writeFile(filename, JSON.stringify(data, null, '\t'), (err) => err ? console.log(err) : console.log('Success!'));
+        const fileName = `${data.name.toLowerCase().split(' ').join('')}.md`;
+        writeToFile(fileName, data);
     })
+
+// TODO: Create a function to write README file
+function writeToFile(fileName, data) 
+{
+    fs.writeFile(fileName, JSON.stringify(data, null, '\t'), (err) => err ? console.log(err) : console.log('Success!'));
+}
+
+// TODO: Create a function to initialize app
+function init() {}
+
+// Function call to initialize app
+init();
