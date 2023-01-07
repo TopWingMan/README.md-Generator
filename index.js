@@ -1,6 +1,7 @@
 // TODO: Include packages needed for this application
-
 const inquirer = require('inquirer');
+const fs = require('fs');
+const { stringify } = require('querystring');
 
 // TODO: Create an array of questions for user input
 const questions = ['Project titile', 'Description', 'Installation instructions', 'Usage information', 'Liscense', 'Contributing', 'Test instructions', 'Github username', 'Email address'];
@@ -57,22 +58,7 @@ inquirer
     ])
     .then((data) =>
     {
-        console.log(data.name);
-        console.log(data.description);
-        console.log(data.installation);
-        console.log(data.usage);
-        console.log(data.liscense);
-        console.log(data.contributers);
-        console.log(data.test);
-        console.log(data.github);
-        console.log(data.email);
+        // TODO: Create a function to write README file
+        const filename = `${data.name.toLowerCase().split(' ').join('')}.md`;
+        fs.writeFile(filename, JSON.stringify(data, null, '\t'), (err) => err ? console.log(err) : console.log('Success!'));
     })
-
-// TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
-
-// TODO: Create a function to initialize app
-function init() {}
-
-// Function call to initialize app
-init();
