@@ -1,17 +1,17 @@
-#README GENERATOR
+# README GENERATOR
 
-##Description does this
+## Description does this
 
-##Table Of Contents
+## Table Of Contents
 
-##Installation instructions this is how
+## Installation instructions this is how
 
-##Usage information this is how we use
+## Usage information this is how we use
 
-##Liscense pee
+## Liscense pee
 
-##Contributers me
+## Contributers me
 
-##Test instructions test this way
+## Test instructions test this way
 
-##Questions zach gmail
+## Questions zach gmail
