@@ -11,7 +11,7 @@ inquirer
     ([
         {
             type: 'input',
-            name: 'name',
+            name: 'title',
             message: questions[0],
         },
         {
@@ -59,14 +59,42 @@ inquirer
     .then((data) =>
     {
         // TODO: Create a function to write README file
-        const fileName = `${data.name.toLowerCase().split(' ').join('')}.md`;
+        const fileName = `${data.title.toLowerCase().split(' ').join('')}.md`;
         writeToFile(fileName, data);
     })
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) 
 {
-    fs.writeFile(fileName, JSON.stringify(data, null, '\t'), (err) => err ? console.log(err) : console.log('Success!'));
+// Write project README
+fs.writeFile(fileName, 
+`#${data.title}
+
+##Description
+${data.description}
+
+##Table Of Contents
+
+##Installation instructions
+${data.installation}
+
+##Usage information
+${data.usage}
+
+##Liscense
+${data.liscense}
+
+##Contributers
+${data.contributers}
+
+##Test instructions
+${data.test}
+
+##Questions
+${data.github}
+${data.email}
+
+`, (err) => err ? console.log(err) : console.log('Success!'));
 }
 
 // TODO: Create a function to initialize app
