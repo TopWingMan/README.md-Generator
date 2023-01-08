@@ -81,9 +81,13 @@ ${data.description}
 [Questions](#Questions)
 
 ## Installation Instructions
+${data.installation}
 
 ## Usage Information
 ${data.usage}
+
+## License
+${data.liscense}
 
 ## Contributers
 ${data.contributers}
@@ -92,8 +96,8 @@ ${data.contributers}
 ${data.test}
 
 ## Questions
-${data.github}
-${data.email}
+<a href="https://www.github.com/${data.github}" target="_blank">GitHub</a>
+You can message me at ${data.email} if you have additional questions.
 
 `, (err) => err ? console.log(err) : console.log('Success!'));
 
