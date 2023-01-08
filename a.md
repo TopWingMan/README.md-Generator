@@ -12,7 +12,7 @@ a
 
 ## Installation Instructions
 
-## Usage Information
+## Usage-Information
 a
 
 ## Contributers
