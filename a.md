@@ -4,7 +4,7 @@
 wasd
 
 ## Table Of Contents
-[Usage nfrmation](#Usage-Information)
+[Usage Information]($Usage-Information)
 
 [Installation-Instrutions](#Installation-Instructions)
 
