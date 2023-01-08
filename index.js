@@ -33,7 +33,7 @@ inquirer
             type: 'checkbox',
             name: 'liscense',
             message: questions[4],
-            choices: ['pee', 'poo'],
+            choices: ['MIT License', 'poo'],
         },
         {
             type: 'input',
@@ -68,33 +68,41 @@ function writeToFile(fileName, data)
 {
 // Write project README
 fs.writeFile(fileName, 
-`#${data.title}
+`# ${data.title}
 
-##Description
+## Description
 ${data.description}
 
-##Table Of Contents
+## Table Of Contents
+[Usage Information]
 
-##Installation instructions
-${data.installation}
+## Installation Instructions
 
-##Usage information
+## Usage Information
 ${data.usage}
 
-##Liscense
-${data.liscense}
-
-##Contributers
+## Contributers
 ${data.contributers}
 
-##Test instructions
+## Test Instructions
 ${data.test}
 
-##Questions
+## Questions
 ${data.github}
 ${data.email}
 
 `, (err) => err ? console.log(err) : console.log('Success!'));
+
+// If we have a liscense write one
+if (data.liscense)
+{
+    WriteLiscense(data.liscense);
+}
+}
+
+function WriteLiscense(liscense)
+{
+
 }
 
 // TODO: Create a function to initialize app
