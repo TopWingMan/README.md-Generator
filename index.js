@@ -1,11 +1,14 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
-const { stringify } = require('querystring');
 
 // TODO: Create an array of questions for user input
-const questions = ['Project titile', 'Description', 'Installation instructions', 'Usage information', 'Liscense', 'Contributing', 'Test instructions', 'Github username', 'Email address'];
+const questions = ['Project title', 'Description', 'Installation instructions', 'Usage information', 'Liscense', 'Contributing', 'Test instructions', 'Github username', 'Email address'];
 
+const mitBadge= '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)';
+const apacheBadge = '[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)';
+const gnuBadge = '[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)';
+// Prompt user for questions
 inquirer
     .prompt
     ([
@@ -33,7 +36,7 @@ inquirer
             type: 'checkbox',
             name: 'liscense',
             message: questions[4],
-            choices: ['MIT License', 'poo'],
+            choices: ['MIT License', 'Apache Liscense 2.0', 'GNU General Public License'],
         },
         {
             type: 'input',
@@ -58,26 +61,39 @@ inquirer
     ])
     .then((data) =>
     {
-        // TODO: Create a function to write README file
+        // Send data collected to WriteToFile to write the README file
         const fileName = `${data.title.toLowerCase().split(' ').join('')}.md`;
-        writeToFile(fileName, data);
+        var badge;
+        if (data.liscense = 'MIT License'){badge = '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)';}
+        else if (data.liscense = 'Apache Liscense 2.0'){badge = '[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)';}
+        else if (data.liscense = 'GNU General Public License'){badge = '[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)';}
+        else {badge = ''};
+        writeToFile(fileName, data, badge);
     })
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) 
+function writeToFile(fileName, data, badge) 
 {
 // Write project README
 fs.writeFile(fileName, 
 `# ${data.title}
 
+## Licsense Badge
+${badge}
+
 ## Description
 ${data.description}
 
 ## Table Of Contents
+
 [Usage Information](#Usage-Information)
+
 [Installation Instructions](#Installation-Instructions)
+
 [Contributers](#Contributers)
+
 [Test Instructions](#Test-Instructions)
+
 [Questions](#Questions)
 
 ## Installation Instructions
@@ -97,24 +113,7 @@ ${data.test}
 
 ## Questions
 <a href="https://www.github.com/${data.github}" target="_blank">GitHub</a>
+
 You can message me at ${data.email} if you have additional questions.
 
-`, (err) => err ? console.log(err) : console.log('Success!'));
-
-// If we have a liscense write one
-if (data.liscense)
-{
-    WriteLiscense(data.liscense);
-}
-}
-
-function WriteLiscense(liscense)
-{
-
-}
-
-// TODO: Create a function to initialize app
-function init() {}
-
-// Function call to initialize app
-init();
+`, (err) => err ? console.log(err) : console.log('Success!'))};
