@@ -30,7 +30,7 @@ MIT License
 Zachary Stanaford
 
 ## Test Instructions
-[Video Demonstration](./Assets/VideoDemo.mkv)
+<a href="https://drive.google.com/file/d/13mo5L7mxRMi3KSE49Rcca0t2cunRyVXH/view?usp=share_link" target="_blank">Video Demonstration</a>
 
 
 ## Questions
