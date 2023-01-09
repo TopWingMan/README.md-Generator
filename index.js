@@ -78,7 +78,6 @@ function writeToFile(fileName, data, badge)
 fs.writeFile(fileName, 
 `# ${data.title}
 
-## Licsense Badge
 ${badge}
 
 ## Description

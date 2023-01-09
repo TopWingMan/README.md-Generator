@@ -1,10 +1,9 @@
 # title
 
-## Licsense Badge
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Description
-descriptioon
+desc
 
 ## Table Of Contents
 
@@ -19,7 +18,7 @@ descriptioon
 [Questions](#Questions)
 
 ## Installation Instructions
-instal;l
+insta;;
 
 ## Usage Information
 usage
@@ -34,7 +33,7 @@ me
 test
 
 ## Questions
-<a href="https://www.github.com/zach" target="_blank">GitHub</a>
+<a href="https://www.github.com/TopWingMan" target="_blank">GitHub</a>
 
-You can message me at zachy if you have additional questions.
+You can message me at zacharystanaford@gmail.com if you have additional questions.
 
