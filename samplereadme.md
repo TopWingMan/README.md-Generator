@@ -1,9 +1,9 @@
-# title
+# Sample Readme
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Description
-desc
+sample description
 
 ## Table Of Contents
 
@@ -18,22 +18,22 @@ desc
 [Questions](#Questions)
 
 ## Installation Instructions
-insta;;
+sample install instructions
 
 ## Usage Information
-usage
+sample usage information
 
 ## License
 MIT License
 
 ## Contributers
-me
+you
 
 ## Test Instructions
-test
+sample test instructions
 
 ## Questions
-<a href="https://www.github.com/TopWingMan" target="_blank">GitHub</a>
+<a href="https://www.github.com/<GitHub Username>" target="_blank">GitHub</a>
 
-You can message me at zacharystanaford@gmail.com if you have additional questions.
+You can message me at <Email Address> if you have additional questions.
 
